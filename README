@@ -1,0 +1,28 @@
+A simple web scraper using php cURL. 
+
+Features:
+  1. Get the full webpage content.
+  2. Get the filtered content from webpage based on starting and ending html tag.
+  
+Get the full webpage content
+
+<?php
+
+include_once('Scraper.php');
+$scraper = new Scraper();
+$page = $scraper->getWholePage('http://www.oooff.com');
+echo $page;
+
+?>
+
+Get the filtered content
+
+<?php
+
+include_once('Scraper.php');
+$scraper = new Scraper();
+$page = $scraper->getWholePage('http://www.oooff.com');
+$leftnav = $scraper->getFilteredContent($page,'<div id="leftnav">','</div>');
+echo $leftnav;
+
+?>
