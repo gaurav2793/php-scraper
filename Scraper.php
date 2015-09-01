@@ -43,4 +43,4 @@ class Scraper {
 
 }
 
-?>s
+?>
